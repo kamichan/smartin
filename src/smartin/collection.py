@@ -16,6 +16,11 @@ class Collection:
             entity = cmd
         self.commands[cmd] = entity
 
+    # Delete command from the collection
+    def del_command(self, cmd):
+        if self.commands.has_key(cmd):
+            del self.commands[cmd]
+
     # Get commands
     def get_commands(self, prefix=''):
         keys = []

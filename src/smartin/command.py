@@ -15,6 +15,11 @@ class Command:
             entity = option
         self.options[option] = entity
 
+    # Delete option
+    def del_option(self, option):
+        if self.options.has_key(option):
+            del self.options[option]
+
     # Get options
     def get_options(self, prefix=''):
         keys = []
